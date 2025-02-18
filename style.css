@@ -97,3 +97,25 @@ input[type="text"]::placeholder {
   color: #888;
   font-style: italic;
 }
+
+.remove {
+  background: #ff3b3b;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.remove:hover {
+  background: #cc2b2b;
+  transform: translateY(-2px);
+}
+
+.remove:active {
+  transform: scale(0.95);
+}
