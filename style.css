@@ -34,9 +34,10 @@ ul {
 }
 
 li {
+  position: relative;
   background: #ffffff;
-  margin: 10px 0;
-  padding: 12px 16px;
+  margin: 12px;
+  padding: 12px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -51,7 +52,7 @@ li:hover {
   background: #f0f8ff;
 }
 
-button {
+.add {
   background: #0072ff;
   color: #fff;
   font-size: 1.2rem;
@@ -64,12 +65,12 @@ button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-button:hover {
+.add:hover {
   background: #0056cc;
   transform: translateY(-2px);
 }
 
-button:active {
+.add:active {
   background: #003d99;
   transform: scale(0.98);
 }
@@ -101,11 +102,8 @@ input[type="text"]::placeholder {
 .remove {
   background: #ff3b3b;
   color: white;
-  font-size: 1rem;
   font-weight: bold;
-  padding: 8px 14px;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s, transform 0.2s ease-in-out;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
@@ -118,4 +116,63 @@ input[type="text"]::placeholder {
 
 .remove:active {
   transform: scale(0.95);
+}
+
+.tick {
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  border: 2px solid #28a745;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+}
+
+.tick:hover {
+  opacity: 0.7;
+  transform: translateY(-2px);
+  background-color: #218838;
+}
+
+.buttonCon {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.remove,
+.tick {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 1.2rem;
+  border-radius: 6px;
+}
+
+i .text {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+li.completed .text::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #7a2de1, #0d74f2);
+  animation: drawLine 0.5s ease-in-out forwards;
+}
+
+@keyframes drawLine {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
 }
