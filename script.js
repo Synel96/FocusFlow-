@@ -11,7 +11,7 @@ function addItem() {
   }
   let li = document.createElement("li");
 
-  li.textContent = newItem;
+  li.textContent ="";
   myList.appendChild(li);
 
   //Create span element
